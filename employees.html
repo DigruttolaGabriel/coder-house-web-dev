@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/457406922a.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,39 +16,44 @@
     <link rel="stylesheet" href="common.css">
 </head>
 <body>
-    <div class="grid-container">
-        <nav id="navbar">
-            <div>
-                <img src="img/favpng_letter-p-icon.png" alt="instagram" width="75px" height="75px">
-            </div>
-            <ul class="navbar-items">
-                <li>
-                    <a href="employees.html"><i class="fas fa-users fa-2x"></i></a>
-                </li>
-                <li>
-                    <a href="index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <section class="bg-image employees-container">
-                <div id="table-section">
-                    <div class="grid-container">
-                        <form action="" class="search-form">
-                            <div class="col-1">
-                                <input type="date" value="">
+    <nav id="navbar">
+        <div>
+            <img src="img/favpng_letter-p-icon.png" alt="instagram" width="75px" height="75px" class="logo">
+        </div>
+        <ul class="navbar-items">
+            <li>
+                <a href="employees.html"><i class="fas fa-users fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="index.html"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="bg-image container-fluid">
+            <div class="row justify-content-center align-items-center pt-5">
+                <div class="col col-10 align-self-center">
+                    <form action="" class="row">
+                        <div class="col d-flex justify-content-center">
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" value="" id="date">
+                                <label for="date">Fecha</label>
                             </div>
-                            <div class="col-2">
-                                <select name="" id="">
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <div class="form-floating mb-3">
+                                <select class="form-select" name="" id="sector">
                                     <option value="Finanzas">Finanzas</option>
                                     <option value="Recursos Humanos">Recursos Humanos</option>
                                     <option value="Sistemas">Sistemas</option>
                                 </select>
+                                <label for="sector">Sector</label>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
+                    <hr>
                     <div class="row center-text">
-                        <table>
+                        <table class="table table-hover">
                             <thead>
                                 <tr>
                                     <th id="th-name">Nombre</th>
@@ -88,24 +96,24 @@
                         </table>
                     </div>
                 </div>
-            </section>
-        </main>
-        <footer>
-            <div>
-                <a href="https://instagram.com" target="_blank"> 
-                    <img class="footer-img" src="img/instagram.png" alt="instagram">
-                </a>
-                <a href="#" target="_blank"> 
-                    <img class="footer-img" src="img/whatsapp.png" alt="whatsapp">
-                </a>
-                <a href="https://facebook.com" target="_blank"> 
-                    <img class="footer-img" src="img/facebook.ico" alt="facebook">
-                </a>
             </div>
-            <div>
-                <span>People <i class="far fa-copyright"></i></span>
-            </div>
-        </footer>
-    </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a href="https://instagram.com" target="_blank"> 
+                <img class="footer-img" src="img/instagram.png" alt="instagram">
+            </a>
+            <a href="#" target="_blank"> 
+                <img class="footer-img" src="img/whatsapp.png" alt="whatsapp">
+            </a>
+            <a href="https://facebook.com" target="_blank"> 
+                <img class="footer-img" src="img/facebook.ico" alt="facebook">
+            </a>
+        </div>
+        <div>
+            <span>People <i class="far fa-copyright"></i></span>
+        </div>
+    </footer>
 </body>
 </html>
