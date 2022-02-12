@@ -6,7 +6,7 @@
 
 .bg-image {
     height: 100vh;
-    background: #ffc79a;
+    background-image: linear-gradient(to right top, #ffffff, #faf3fb, #fde6f1, #ffd9dd, #ffcec4, #ffcbb7, #ffc8a9, #ffc79a, #ffc79a, #ffc79a, #ffc79a, #ffc79a);;
   }
 
 h1 {
@@ -141,6 +141,13 @@ input[type=submit], input[type=button] {
 
 input[type=submit]:hover {
     background-color: #B79CED;
+}
+
+.title-name {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    animation: shake 0.5s;
 }
 
 /*---------FOOTER---------*/
@@ -477,4 +484,20 @@ footer a {
         text-align: justify;
         font-size: 15px;
     }
+}
+
+/*ANIMATIONS*/
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
