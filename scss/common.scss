@@ -1,7 +1,45 @@
+@import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Montserrat:wght@100;400&display=swap');
 * {
     margin: 0;
     padding: 0;
+}
+
+$font-sizes: (
+    "size-20": 20px,
+    "size-23": 23px,
+    "size-35": 35px,
+);
+
+$fonts: (
+    "font-dongle": (
+        "Dongle",
+        sans-serif
+    ),
+    "font-monserrat": (
+        "Monserrat",
+        sans-serif
+    ),
+);
+
+@each $name, $font in $fonts {
+    .#{$name} {
+      font-size: $font;
+    }
+  }
+  
+@each $name, $size in $font-sizes {
+    .#{$name} {
+        font-size: $size;
+    }
+}
+
+@mixin justify-content-mixin($value) {
+    justify-content: $value;  
+};
+
+h1 {
+    font-size: 32px;
 }
 
 .bg-image {
@@ -9,18 +47,18 @@
     background-image: linear-gradient(to right top, #ffffff, #faf3fb, #fde6f1, #ffd9dd, #ffcec4, #ffcbb7, #ffc8a9, #ffc79a, #ffc79a, #ffc79a, #ffc79a, #ffc79a);;
 }
 
-h1 {
-    font-size: 32px;
-}
+.display-flex {
+    display: flex;
+};
 
 .purple {
-    color: #000000 !important;
-    border-color: #B79CED !important;
+    color: $color-black !important;
+    border-color: $color-purple !important;
     
     &:hover {
-        color: #ffffff !important;
-        border-color: #B79CED !important;
-        background-color: #B79CED !important;
+        color: $color-white !important;
+        border-color: $color-purple !important;
+        background-color: $color-purple !important;
     }
 }
 
@@ -31,16 +69,16 @@ h1 {
 /*---------NAVBAR---------*/
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    @extend .display-flex;
+    @include justify-content-mixin(space-between);
     align-items: center;
-    background: #ffc79a;
+    background: $color-orange;
 }
 
 .navbar-items {
-    display: flex;
+    @extend .display-flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    @include justify-content-mixin(space-between);
     list-style-type: none;
 
     li {
@@ -55,17 +93,17 @@ nav {
 /*---------LOGIN---------*/
 
 .title-name {
-    display:flex;
+    @extend .display-flex;
     align-items: center;
-    justify-content: center;
+    @include justify-content-mixin(center);
     animation: shake 1.5s;
 }
 
 /*---------FOOTER---------*/
 
 footer {
-    display: flex;
-    justify-content: space-around;
+    @extend .display-flex;
+    @include justify-content-mixin(space-around);
     align-items: center;
     bottom: 0;
     margin: 0;
@@ -73,7 +111,7 @@ footer {
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #f2f2f2;
+    background-color: $color-grey-white;
     font-size: 22px;
 
     a {
@@ -89,8 +127,8 @@ footer {
 }
 
 .services-list {
-    display: flex;
-    justify-content: space-around;
+    @extend .display-flex;
+    @include justify-content-mixin(space-around);
     flex-direction: column;
     list-style-type: none;
     row-gap: 20px;
