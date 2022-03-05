@@ -52,7 +52,7 @@ nav {
   .navbar-items li {
     margin-right: 20px; }
   .navbar-items a {
-    color: black; }
+    color: #f73b38; }
 
 /*---------LOGIN---------*/
 .title-name {
@@ -87,6 +87,9 @@ footer {
   list-style-type: none;
   row-gap: 20px;
   padding-top: 20px; }
+
+.action-icons a i {
+  color: #f73b38; }
 
 /*ANIMATIONS*/
 @keyframes shake {

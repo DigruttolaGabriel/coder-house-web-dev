@@ -86,7 +86,7 @@ nav {
     }
     
     a {
-        color: black;
+        color: $color-red;
     }
 }
 
@@ -133,6 +133,14 @@ footer {
     list-style-type: none;
     row-gap: 20px;
     padding-top: 20px;
+}
+
+.action-icons {
+    a {
+        i {
+            color: $color-red;
+        }
+    }
 }
 
 /*ANIMATIONS*/
