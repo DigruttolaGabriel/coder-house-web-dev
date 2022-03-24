@@ -66,6 +66,16 @@ h1 {
     animation: shake 0.5s;
 }
 
+.img-height-365 {
+    min-height: 365px;
+    max-height: 365px;
+}
+
+.special-btn-red {
+    color: $color-white;
+    background-color: $color-red;
+}
+
 /*---------NAVBAR---------*/
 
 nav {
@@ -87,6 +97,10 @@ nav {
     
     a {
         color: $color-red;
+
+        &:hover {
+            color: $color-white;
+        }
     }
 }
 

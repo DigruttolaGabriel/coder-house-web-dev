@@ -39,6 +39,14 @@ h1 {
 .logo {
   animation: shake 0.5s; }
 
+.img-height-365 {
+  min-height: 365px;
+  max-height: 365px; }
+
+.special-btn-red {
+  color: #ffffff;
+  background-color: #f73b38; }
+
 /*---------NAVBAR---------*/
 nav {
   justify-content: space-between;
@@ -53,6 +61,8 @@ nav {
     margin-right: 20px; }
   .navbar-items a {
     color: #f73b38; }
+    .navbar-items a:hover {
+      color: #ffffff; }
 
 /*---------LOGIN---------*/
 .title-name {
