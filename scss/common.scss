@@ -43,7 +43,7 @@ h1 {
 }
 
 .bg-image {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to right top, #ffffff, #faf3fb, #fde6f1, #ffd9dd, #ffcec4, #ffcbb7, #ffc8a9, #ffc79a, #ffc79a, #ffc79a, #ffc79a, #ffc79a);;
 }
 
@@ -157,6 +157,23 @@ footer {
     }
 }
 
+/*SERVICES*/
+
+.social-medias {
+    @extend .display-flex;
+    @include justify-content-mixin(space-around);
+    a {
+        text-decoration: none;
+    }
+}
+
+.social-media-img {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
 /*ANIMATIONS*/
 
 @keyframes shake {
@@ -172,3 +189,10 @@ footer {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+.employee-animation {
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
