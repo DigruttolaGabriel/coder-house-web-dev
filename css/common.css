@@ -25,7 +25,7 @@ h1 {
   min-height: 100vh;
   background-image: linear-gradient(to right top, #ffffff, #faf3fb, #fde6f1, #ffd9dd, #ffcec4, #ffcbb7, #ffc8a9, #ffc79a, #ffc79a, #ffc79a, #ffc79a, #ffc79a); }
 
-.display-flex, nav, .navbar-items, .title-name, footer, .services-list, .social-medias {
+.display-flex, nav, .navbar-items, .title-name, footer, .services-list, .social-medias, .employees-cards {
   display: flex; }
 
 .purple {
@@ -39,13 +39,29 @@ h1 {
 .logo {
   animation: shake 0.5s; }
 
-.img-height-365 {
+.img-height {
   min-height: 365px;
   max-height: 365px; }
 
 .special-btn-red {
   color: #ffffff;
   background-color: #f73b38; }
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .img-height {
+    display: none; }
+  #th-birthdate {
+    display: none; }
+  #th-age {
+    display: none; }
+  #th-sex {
+    display: none; }
+  .birthdate-data {
+    display: none; }
+  .age-data {
+    display: none; }
+  .sex-data {
+    display: none; } }
 
 /*---------NAVBAR---------*/
 nav {
@@ -112,6 +128,10 @@ footer {
   height: 45px;
   padding: 5px;
   vertical-align: middle; }
+
+/*SERVICES*/
+.employees-cards {
+  justify-content: space-around; }
 
 /*ANIMATIONS*/
 @keyframes shake {
